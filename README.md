@@ -29,9 +29,10 @@ Melihat Daftar Vlan
 
 ### 5. Tes Koneksi Menggunakan ICMP
 
-![Screenshot 2024-10-10 125955](https://github.com/user-attachments/assets/31bf6c65-2f31-475a-90d8-b315633c01da)
-![Screenshot 2024-10-10 125813](https://github.com/user-attachments/assets/04674c4b-3eeb-4c17-ac94-a2542a517038)
-![Screenshot 2024-10-10 130110](https://github.com/user-attachments/assets/c7119412-d2bf-4bc3-9d52-7e27f6a6b05b)
+![Screenshot 2024-10-11 084136](https://github.com/user-attachments/assets/f9250edf-9750-43c1-8362-d0f9f7fe4af4)
+![Screenshot 2024-10-11 084324](https://github.com/user-attachments/assets/e26783d9-f178-42f5-94ea-de42ffa031e3)
+![Screenshot 2024-10-11 084324](https://github.com/user-attachments/assets/c3f08e6e-ebae-415e-8c30-771553a5ff38)
+
 
 **Hasil Tes Koneksi**                             
 ![image](https://github.com/user-attachments/assets/7c51b5c6-1089-49ab-b1d0-812b41b98860)
@@ -39,9 +40,9 @@ Melihat Daftar Vlan
 
 ## ANALISIS PERCOBAAN
 
-Percobaan ini dilakukan untuk menguji koneksi antar tiga PC yang berada di VLAN dan subnet yang berbeda. Setiap PC dikonfigurasi dengan alamat IP, subnet mask, dan default gateway. Default gateway penting untuk memastikan bahwa setiap PC dapat berkomunikasi dengan jaringan lain di luar subnet lokal melalui router yang sudah dikonfigurasi.
+Percobaan ini dilakukan untuk menguji konektivitas antar tiga PC yang berada di VLAN dan subnet yang berbeda. Setiap PC dikonfigurasi dengan alamat IP, subnet mask, dan default gateway yang dirancang untuk memungkinkan komunikasi antar subnet melalui sebuah router. Default gateway sangat penting dalam jaringan komputer karena memungkinkan perangkat di satu subnet untuk berkomunikasi dengan perangkat lain di subnet yang berbeda melalui router.
 
-**Analisis Konfigurasi Setiap PC:**
+**Dalam percobaan ini, ditemukan bahwa dua dari tiga PC memiliki konfigurasi default gateway yang tidak sesuai, sehingga menyebabkan kegagalan komunikasi. Berikut analisis konfigurasi masing-masing PC:**
 
 1. **PC1**:  
    - **Masalah**: Gateway yang digunakan berada di subnet 192.168.200.0/24, sementara PC1 berada di subnet 192.168.100.0/24. Hal ini menyebabkan paket tidak dapat diteruskan ke router yang benar.  
